@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 
-import './08-reducer/intro-reducer'
+// import './08-reducer/intro-reducer'
 
 // import { Padre } from './07-tarea-memo/Padre'
 // import { CallbackHook } from './06-memos/CallbackHook'
@@ -16,9 +16,10 @@ import './08-reducer/intro-reducer'
 // import { CounterApp } from './01-useState/CounterApp'
 // import { HooksApp } from './HooksApp'
 import './index.css'
+import { TodoApp } from './08-reducer/TodoApp'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-  // <Padre />
+  <TodoApp />
   // </React.StrictMode>,
 )
