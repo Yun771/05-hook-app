@@ -1,8 +1,30 @@
-export const todoReducer = (initialState, action) => {
+
+
+export const todoReducer = (state = [], action) => {
     switch (action.type) {
-        case 'ABC':
-            throw new Error('Action.type = ABC no esta definido')    ;
+        case '[TODO] ADD TODO':
+
+            return [action.payload, ...state];
+
+        case '[TODO] REMOVE TODO':
+            return state.filter((todo) => todo.id !== action.payload);
+
+        case '[TODO] TODO STATUS CHANGE':
+
+            return state.map((todo) => {
+
+                if (todo.id === action.payload) {
+                    return {
+                        ...todo,
+                        done: !todo.done,
+                    }
+                }
+
+                return todo;
+            });
+
         default:
-            return initialState;
+            return state;
     }
+
 }
