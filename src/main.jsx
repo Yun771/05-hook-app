@@ -1,5 +1,3 @@
-import ReactDOM from 'react-dom/client'
-
 // import './08-reducer/intro-reducer'
 
 // import { Padre } from './07-tarea-memo/Padre'
@@ -15,11 +13,20 @@ import ReactDOM from 'react-dom/client'
 // import { CounterWithCustomHook } from './01-useState/CounterWithCustomHook'
 // import { CounterApp } from './01-useState/CounterApp'
 // import { HooksApp } from './HooksApp'
+// import { TodoApp } from './08-reducer/TodoApp'
+// import { MainApp } from './09-useContext/MainApp'
+import ReactDOM from 'react-dom/client'
+
+
+
 import './index.css'
-import { TodoApp } from './08-reducer/TodoApp'
+import { router } from './09-useContext';
+import { RouterProvider } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-  <TodoApp />
-  // </React.StrictMode>,
+
+  <RouterProvider router={router} />
+  // {/* // <React.StrictMode> */}
+  // {/* <MainApp /> */}
+  // {/* // </React.StrictMode>, */}
 )
